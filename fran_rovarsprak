@@ -1,0 +1,14 @@
+def humanize(phrase):
+    
+    translation = ""
+    i=0
+    while i < len(phrase):
+        if phrase.lower()[i] not in " aeiouåäö":  #lower, för alla bokstäver blir små för tillfället
+            translation = translation + phrase[i]
+            i = i + 3
+        else:
+            translation = translation + phrase[i]
+            i+=1
+    return translation
+
+print(humanize(input("Enter a phrase to humanize: ")))
